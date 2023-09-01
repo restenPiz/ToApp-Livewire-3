@@ -1,11 +1,7 @@
 <div>
     
     {{--Inicio do navbar--}}
-    <nav class="navbar bg-body-tertiary">
-        <div class="container-fluid">
-            <span class="navbar-brand mb-0 h1">Navbar</span>
-        </div>
-    </nav>
+    @include('livewire.layouts.navbar')
 
     {{--Inicio do titulo da applicacao--}}
     <h1 style="text-align: center">Todo App</h1>
@@ -23,5 +19,7 @@
             </div>
         </form>
     </div>
+
+    {{--Inicio da tabela responsavel por listar os dados--}}
 
 </div>
