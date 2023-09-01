@@ -1,3 +1,11 @@
 <div>
-    <h1>Ola Mundo</h1>
+    
+    {{--Inicio do navbar--}}
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">Navbar</span>
+        </div>
+    </nav>
+
+
 </div>
