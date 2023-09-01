@@ -40,6 +40,12 @@
                 <tr>
                     <th scope="row">{{$task->id}}</th>
                     <td>{{$task->Task}}</td>
+                    <td>
+                        <div class="d-grid gap-2 d-md-block">
+                            <button class="btn btn-primary" type="button">Editar</button>
+                            <button class="btn btn-danger" type="button">Eliminar</button>
+                        </div>
+                    </td>
                 </tr>
               @endforeach
             </tbody>
