@@ -11,12 +11,11 @@ class TaskController extends Component
 {
     //*Declarando as variaveis que irei usar na aplicacao
     public $Task;
-    use WithPagination;
 
     //?Inicio do metodo principal responsavel pela pagina principal
     public function render()
     {
-        $tasks=\App\Models\Task::paginate(10);
+        $tasks=\App\Models\Task::all();
 
         return view('livewire.task-controller',compact('tasks'));
     }

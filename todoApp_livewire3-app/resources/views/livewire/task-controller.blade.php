@@ -50,9 +50,12 @@
               @endforeach
             </tbody>
         </table>
-        <div class="d-flex justify-content-center">
-            {{ $tasks->links() }}
-        </div>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                {{ $tasks->links() }}
+            </ul>
+        </nav>
+    
     </div>
 
 </div>
