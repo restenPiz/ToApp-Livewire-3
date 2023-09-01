@@ -10,7 +10,7 @@ class Task extends Model
     use HasFactory;
 
     //*Instanciando a tabela
-    protected $table='Tasks';
+    protected $table='tasks';
 
     //?Criando a tabela
     protected $fillable=[
