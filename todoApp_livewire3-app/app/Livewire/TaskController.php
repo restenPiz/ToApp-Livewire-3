@@ -9,12 +9,12 @@ use Request;
 class TaskController extends Component
 {
     //*Declarando as variaveis que irei usar na aplicacao
-    public $task;
+    public \App\Models\Task $task;
 
     //?Inicio do metodo principal responsavel pela pagina principal
     public function render()
     {
-        $tasks=Task::all();
+        $tasks=\App\Models\Task::all();
 
         return view('livewire.task-controller',compact('tasks'));
     }
@@ -28,11 +28,9 @@ class TaskController extends Component
             'Task'=>'required',
         ]);
 
-        $table=Request::input($this->task);
-
-        $table->save();
-
-        return back();
+        \App\Models\Task::create(
+            $this->task->all()
+        );
 
     }
 }
