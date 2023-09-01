@@ -12,6 +12,12 @@ class TaskController extends Component
     //*Declarando as variaveis que irei usar na aplicacao
     public $Task;
 
+    public $id;
+
+    public $showDeleteModal=false;
+
+    public $showEditModal=false;
+
     //?Inicio do metodo principal responsavel pela pagina principal
     public function render()
     {
@@ -41,6 +47,22 @@ class TaskController extends Component
         $table->save();
 
         $this->Task='';
+    }
+
+    //?Inicio do modal para editar os dados
+    public function openEditModal($id)
+    {
+        $this->id=$id;
+
+        $this->showEditModal=true;
+    }
+    
+    //?Inicio do modal para eliminar
+    public function openDeleteModal($id)
+    {
+        $this->id=$id;
+
+        $this->showDeleteModal=true;
     }
 }
 

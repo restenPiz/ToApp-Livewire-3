@@ -42,19 +42,58 @@
                     <td>{{$task->Task}}</td>
                     <td>
                         <div class="d-grid gap-2 d-md-block">
-                            <button class="btn btn-primary" type="button">Editar</button>
-                            <button class="btn btn-danger" type="button">Eliminar</button>
+                            <button wire:click="openEditModal({{ $task->id }})" class="btn btn-primary" type="button">Editar</button>
+                            <button wire:click="openDeleteModal({{ $task->id }})" class="btn btn-danger" type="button">Eliminar</button>
                         </div>
                     </td>
                 </tr>
+
+                {{--Inicio do modal de editar--}}
+                @if($showEditModal)
+                <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="editModalLabel">Editar Tarefa</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- Adicione seus campos de edição aqui -->
+                                <input wire:model="editedTask" type="text" class="form-control" placeholder="Editar a tarefa">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                <button wire:click="update" class="btn btn-primary">Salvar Alterações</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @endif
+
+                {{--Inicio do modal de eliminar--}}
+                @if($showDeleteModal)
+                <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="deleteModalLabel">Confirmar Exclusão</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Tem certeza de que deseja excluir esta tarefa?
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                <button wire:click="delete" class="btn btn-danger">Excluir</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @endif
+
               @endforeach
             </tbody>
         </table>
-        <nav aria-label="Page navigation example">
-            <ul class="pagination justify-content-center">
-                {{ $tasks->links() }}
-            </ul>
-        </nav>
     
     </div>
 
