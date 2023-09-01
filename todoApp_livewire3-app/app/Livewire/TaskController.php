@@ -2,14 +2,14 @@
 
 namespace App\Livewire;
 
-use Illuminate\Console\View\Components\Task;
+use App\Models\Task;
 use Livewire\Component;
 use Request;
 
 class TaskController extends Component
 {
     //*Declarando as variaveis que irei usar na aplicacao
-    public \App\Models\Task $task;
+    public $Task;
 
     //?Inicio do metodo principal responsavel pela pagina principal
     public function render()
@@ -22,15 +22,24 @@ class TaskController extends Component
     //?Inicio do metodo para salvar os dados
     public function save()
     {
-        $table=new \App\Models\Task();
-
         $this->validate([
             'Task'=>'required',
         ]);
 
+        /*
         \App\Models\Task::create(
-            $this->task->all()
+            [
+                'Task'=>$this->Task,
+            ]
         );
+        */
+        $table=new Task();
 
+        $table->Task=$this->Task;
+
+        $table->save();
+
+        $this->Task='';
     }
 }
+
