@@ -32,13 +32,16 @@
               <tr>
                 <th scope="col">#</th>
                 <th scope="col">Tarefa</th>
+                <th scope="col"></th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-              </tr>
+              @foreach ($tasks as $task)
+                <tr>
+                    <th scope="row">{{$task->id}}</th>
+                    <td>{{$task->Task}}</td>
+                </tr>
+              @endforeach
             </tbody>
         </table>
     </div>
