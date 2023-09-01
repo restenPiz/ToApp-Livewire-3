@@ -7,14 +7,14 @@
     <div class="container" style="margin-top:3rem">
         <div class="card">
             <div class="container">
-                <form action="">
+                <form wire:submit="save">
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Tarefa</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Digite a sua tarefa">
+                        <input wire:model="Task" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Digite a sua tarefa">
                     </div>
         
                     {{--Inicio do butao submit--}}
-                    <button type="button" class="btn btn-success">Adicionar Tarefa</button>
+                    <button type="submit" class="btn btn-success">Adicionar Tarefa</button>
                 </form><br>
             </div>
         </div>
