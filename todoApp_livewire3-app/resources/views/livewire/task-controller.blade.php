@@ -48,31 +48,30 @@
                     </td>
                 </tr>
 
-                {{--Inicio do modal de editar--}}
-                @if($showEditModal === $task->id)
-                <div class="modal fade" id="showEditModal" tabindex="-1" aria-labelledby="showEditModal" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="editModalLabel">Editar Tarefa</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <!-- Adicione seus campos de edição aqui -->
-                                <input wire:model="editedTask" type="text" class="form-control" placeholder="Editar a tarefa">
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                                <button wire:click="update" class="btn btn-primary">Salvar Alterações</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                @endif
-
               @endforeach
             </tbody>
         </table>
+        
+        @if($showEditModal)
+        <div class="modal fade" id="showEditModal" tabindex="-1" aria-labelledby="showEditModal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editModalLabel">Editar Tarefa</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Adicione seus campos de edição aqui -->
+                        <input wire:model="editedTask" type="text" class="form-control" placeholder="Editar a tarefa">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        <button wire:click="update" class="btn btn-primary">Salvar Alterações</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @endif
     
     </div>
 
