@@ -21,7 +21,7 @@ class TaskController extends Component
     //?Inicio do metodo principal responsavel pela pagina principal
     public function render()
     {
-        $tasks=\App\Models\Task::all();
+        $tasks=Task::all();
 
         return view('livewire.task-controller',compact('tasks'));
     }

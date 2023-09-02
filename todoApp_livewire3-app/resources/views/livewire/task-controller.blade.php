@@ -43,14 +43,14 @@
                     <td>
                         <div class="d-grid gap-2 d-md-block">
                             <button wire:click="openEditModal({{ $task->id }})" class="btn btn-primary" type="button">Editar</button>
-                            <button wire:click="openDeleteModal({{ $task->id }})" class="btn btn-danger" type="button">Eliminar</button>
+                            <button wire:click="openDeleteModal({{ $task->id }})" class="btn btn-danger" type="submit">Eliminar</button>
                         </div>
                     </td>
                 </tr>
 
                 {{--Inicio do modal de editar--}}
-                @if($showEditModal)
-                <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+                @if($showEditModal === $task->id)
+                <div class="modal fade" id="showEditModal" tabindex="-1" aria-labelledby="showEditModal" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
