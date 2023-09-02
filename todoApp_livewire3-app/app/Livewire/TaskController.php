@@ -14,6 +14,8 @@ class TaskController extends Component
 
     public $id;
 
+    public $editedTask;
+
     public $showDeleteModal=false;
 
     public $showEditModal=false;
@@ -51,7 +53,7 @@ class TaskController extends Component
 
         $task=Task::find($id);
 
-        return view('livewire.task-controller',['task'=>$task]);
+        $this->editedTask = $task->Task;
     }
     
     //?Inicio do modal para eliminar
@@ -60,6 +62,19 @@ class TaskController extends Component
         $task = Task::find($id);
 
         $task->delete();
+    }
+
+    public function update()
+    {
+        $task=Task::find($this->id);
+
+        $task->Task=$this->editTask;
+        $task->save();
+
+        //*Fechar o modal
+        $this->showEditModal=false;
+
+        $this->editedTask='';
     }
 }
 
