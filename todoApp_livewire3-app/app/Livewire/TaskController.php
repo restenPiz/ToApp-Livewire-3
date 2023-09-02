@@ -60,9 +60,9 @@ class TaskController extends Component
     //?Inicio do modal para eliminar
     public function openDeleteModal($id)
     {
-        $this->id=$id;
+        $task = Task::find($id);
 
-        $this->showDeleteModal=true;
+        $task->delete();
     }
 }
 
