@@ -60,7 +60,7 @@
                                 </div>
                                 <div class="modal-body">
                                     <!-- Adicione seus campos de edição aqui -->
-                                    <input wire:model="editedTask" type="text" class="form-control" placeholder="Editar a tarefa">
+                                    <input wire:model="Task" value="{{$task->Task}}" type="text" class="form-control">
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>

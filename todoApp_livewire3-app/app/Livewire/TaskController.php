@@ -48,6 +48,10 @@ class TaskController extends Component
         $this->id=$id;
 
         $this->showEditModal=true;
+
+        $task=Task::find($id);
+
+        return view('livewire.task-controller',['task'=>$task]);
     }
     
     //?Inicio do modal para eliminar
