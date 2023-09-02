@@ -68,13 +68,14 @@ class TaskController extends Component
     {
         $task=Task::find($this->id);
 
-        $task->Task=$this->editTask;
+        $task->Task=$this->editedTask;
         $task->save();
 
         //*Fechar o modal
-        $this->showEditModal=false;
+        $this->showEditModal = false;
 
-        $this->editedTask='';
+        //? Limpe o valor em $editedTask
+        $this->editedTask = '';
     }
 }
 

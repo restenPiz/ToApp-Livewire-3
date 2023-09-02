@@ -50,7 +50,7 @@
 
                 {{--Inicio do modal de editar--}}
 
-                @if($showEditModal)
+                @if($showEditModal===true)
                     <div wire:ignore.self class="modal fade" id="showEditModal" tabindex="-1" aria-labelledby="showEditModal" aria-hidden="true">
                         <div class="modal-dialog">
                             <form wire::submit="update">
