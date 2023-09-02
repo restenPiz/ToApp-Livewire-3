@@ -33,13 +33,6 @@ class TaskController extends Component
             'Task'=>'required',
         ]);
 
-        /*
-        \App\Models\Task::create(
-            [
-                'Task'=>$this->Task,
-            ]
-        );
-        */
         $table=new Task();
 
         $table->Task=$this->Task;
