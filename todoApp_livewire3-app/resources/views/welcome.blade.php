@@ -21,8 +21,13 @@
     {{-- Fim do corpo do meu website --}}
 
     {{-- Início do link de javascript --}}
-    @livewireScripts
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    @livewireScripts
+
     {{-- Fim do link do javascript --}}
 
 </body>
