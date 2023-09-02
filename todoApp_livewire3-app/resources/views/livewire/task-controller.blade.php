@@ -43,7 +43,7 @@
                     <td>
                         <div class="d-grid gap-2 d-md-block">
                             <button wire:click="openEditModal({{ $task->id }})" class="btn btn-primary" type="button">Editar</button>
-                            <button wire:submit="openDeleteModal({{ $task->id }})" class="btn btn-danger" type="submit">Eliminar</button>
+                            <button wire:click="openDeleteModal({{ $task->id }})" class="btn btn-danger" type="submit">Eliminar</button>
                         </div>
                     </td>
                 </tr>
