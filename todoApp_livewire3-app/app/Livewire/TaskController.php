@@ -12,7 +12,7 @@ class TaskController extends Component
 {
     //*Declarando as variaveis que irei usar na aplicacao
     public $Task, $editedTask, $id;
-    public $showEditModal=true;
+    public $showEditModal=false;
 
     //?Inicio do metodo principal responsavel pela pagina principal
     public function render()
@@ -68,9 +68,8 @@ class TaskController extends Component
         $task->save();
 
         //*Fechar o modal
-        //$this->showEditModal = false;
+        $this->showEditModal = false;
         
-        $this->dispatch('modalClosed'); 
     }
 }
 
