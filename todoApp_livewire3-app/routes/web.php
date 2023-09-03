@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Livewire\TaskController;
+use App\Livewire\TaskController;
 
 
 //?Inicio de todas as rotas da aplicacao
@@ -10,4 +10,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/Task', TaskController::class)->name('task');
+Route::get('/task', TaskController::class);
