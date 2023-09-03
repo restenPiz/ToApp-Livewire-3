@@ -70,9 +70,10 @@ class TaskController extends Component
 
         //*Fechar o modal
         //$this->showEditModal = false;
-        $this->showEditModal = false;
 
         $this->editedTask='';
+        
+        $this->showEditModal = false;
     }
 }
 
