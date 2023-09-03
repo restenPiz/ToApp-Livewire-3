@@ -10,14 +10,8 @@ use Request;
 class TaskController extends Component
 {
     //*Declarando as variaveis que irei usar na aplicacao
-    public $Task;
-
-    public $id;
-
-    public $editedTask;
-
+    public $Task, $editedTask, $id;
     public $showDeleteModal=false;
-
     public $showEditModal=false;
 
     //?Inicio do metodo principal responsavel pela pagina principal
