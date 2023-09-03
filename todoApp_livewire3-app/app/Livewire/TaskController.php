@@ -19,8 +19,9 @@ class TaskController extends Component
     public function render()
     {
         $tasks=Task::all();
+        $showEditModal=false;
 
-        return view('livewire.task-controller',compact('tasks'));
+        return view('livewire.task-controller',compact('tasks'),['showEditModal'=>$showEditModal]);
     }
 
     //?Inicio do metodo para salvar os dados
