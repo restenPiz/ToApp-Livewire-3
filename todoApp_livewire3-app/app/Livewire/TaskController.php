@@ -68,11 +68,10 @@ class TaskController extends Component
 
         $task->save();
 
+        $this->editedTask='';
         //*Fechar o modal
         //$this->showEditModal = false;
         $this->dispatchBrowserEvent('modalClosed');
-
-        $this->editedTask='';
     }
 }
 
