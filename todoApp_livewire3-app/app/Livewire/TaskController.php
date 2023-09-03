@@ -12,16 +12,14 @@ class TaskController extends Component
 {
     //*Declarando as variaveis que irei usar na aplicacao
     public $Task, $editedTask, $id;
-    public $showDeleteModal=false;
-    public $showEditModal=false;
+    public $showEditModal=true;
 
     //?Inicio do metodo principal responsavel pela pagina principal
     public function render()
     {
         $tasks=Task::all();
-        $showEditModal=false;
 
-        return view('livewire.task-controller',compact('tasks'),['showEditModal'=>$showEditModal]);
+        return view('livewire.task-controller',compact('tasks'));
     }
 
     //?Inicio do metodo para salvar os dados
@@ -45,11 +43,11 @@ class TaskController extends Component
     {
         $this->id=$id;
 
-        $this->showEditModal=true;
-
         $task=Task::find($id);
 
         $this->editedTask = $task->Task;
+
+        $this->showEditModal=true;
     }
     
     //?Inicio da funcao para eliminar
