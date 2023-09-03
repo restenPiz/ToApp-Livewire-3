@@ -65,7 +65,7 @@
                                 
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                                    <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+                                    <button type="s ubmit" class="btn btn-primary">Salvar Alterações</button>
                                 </div>
                             </div>
                         </form>
@@ -79,4 +79,5 @@
         </table>
     
     </div>
+
 </div>

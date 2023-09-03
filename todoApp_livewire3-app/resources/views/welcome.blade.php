@@ -27,6 +27,6 @@
     @livewireScripts
 
     {{-- Fim do link do javascript --}}
-
+    @stack('scripts')
 </body>
 </html>
