@@ -80,4 +80,18 @@
     
     </div>
 
+    {{--Inicio do codigo responsavel por fechar o modal--}}
+    <script>
+        document.addEventListener('livewire:load', function () {
+            window.livewire.on('toggleProductModal', () => {
+                $('#showEditModal').modal('toggle');
+            });
+
+            // Ouvir o evento personalizado e fechar o modal
+            window.livewire.on('modalClosed', () => {
+                $('#showEditModal').modal('hide');
+            });
+        });
+    </script>
+
 </div>
