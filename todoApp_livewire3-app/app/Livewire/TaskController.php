@@ -73,7 +73,7 @@ class TaskController extends Component
 
         $this->editedTask='';
 
-        return Redirect::to(route('Task.index'));
+        return Redirect::to(route('task'));
     }
 }
 

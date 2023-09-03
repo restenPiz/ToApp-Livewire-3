@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Livewire\ProductList;
+use App\Http\Livewire\TaskController;
 
 
 //?Inicio de todas as rotas da aplicacao
@@ -10,4 +10,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/products', ProductList::class)->name('products.index');
+Route::get('/Task', TaskController::class)->name('task');
