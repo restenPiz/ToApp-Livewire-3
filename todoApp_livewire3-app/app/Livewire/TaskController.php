@@ -43,11 +43,11 @@ class TaskController extends Component
     {
         $this->id=$id;
 
+        $this->showEditModal=true;
+
         $task=Task::find($id);
 
         $this->editedTask = $task->Task;
-
-        $this->showEditModal=true;
     }
     
     //?Inicio da funcao para eliminar
