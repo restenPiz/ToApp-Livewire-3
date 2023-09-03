@@ -50,22 +50,20 @@
 
                 {{--Inicio do modal de editar--}}
                     
-                <div wire:ignore.self class="modal fade" id="showEditModal" tabindex="-1" aria-labelledby="showEditModal" aria-hidden="true">
+                <div wire:ignore.self class="modal fade" id="showEditModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
-                        <form wire:submit="update">
+                        <form wire:submit.prevent="update">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="editModalLabel">Editar Tarefa</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <!-- Adicione seus campos de edição aqui -->
-                                    <input wire:model="editedTask" type="text" class="form-control">
+                                    <input wire:model="editedTask" type="text" class="form-control" value="{{$task->editedTask}}">
                                 </div>
-                                
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                                    <button type="s ubmit" class="btn btn-primary">Salvar Alterações</button>
+                                    <button type="submit" class="btn btn-primary">Salvar Alterações</button>
                                 </div>
                             </div>
                         </form>

@@ -68,6 +68,7 @@ class TaskController extends Component
         $task->save();        
 
         $this->showEditModal = false;
+
     }
 }
 
