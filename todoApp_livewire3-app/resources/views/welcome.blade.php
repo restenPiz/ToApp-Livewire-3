@@ -27,8 +27,8 @@
     
     <script>
         document.addEventListener('livewire:update', function () {
-            Livewire.on('dadosAtualizados', function (fecharModal) {
-                if (fecharModal) {
+            Livewire.on('dadosAtualizados', (eventData) => {
+                if (eventData.fecharModal) {
                     $('#showEditModal').modal('hide');
                 }
             });

@@ -4,9 +4,6 @@ namespace App\Livewire;
 
 use App\Models\Task;
 use Livewire\Component;
-use Livewire\WithPagination;
-use Request;
-use Illuminate\Support\Facades\Redirect;
 
 class TaskController extends Component
 {
