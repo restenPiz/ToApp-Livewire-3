@@ -25,5 +25,14 @@
     {{--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>--}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>    
     
+    <script>
+        document.addEventListener('livewire:update', function () {
+            Livewire.on('dadosAtualizados', function (fecharModal) {
+                if (fecharModal) {
+                    $('#showEditModal').modal('hide');
+                }
+            });
+        });
+    </script>
 </body>
 </html>

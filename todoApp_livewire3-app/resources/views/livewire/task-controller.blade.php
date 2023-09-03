@@ -81,10 +81,3 @@
     </div>
 
 </div>
-
-<script>
-    window.addEventListener('modalClosed', () => {
-        // Coloque aqui o código para fechar o modal, por exemplo:
-        $('#showEditModal').modal('hide');
-    });
-</script>

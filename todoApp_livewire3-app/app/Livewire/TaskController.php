@@ -43,7 +43,7 @@ class TaskController extends Component
     {
         $this->id=$id;
 
-        $this->showEditModal=false;
+        $this->showEditModal=true;
 
         $task=Task::find($id);
 
@@ -67,7 +67,7 @@ class TaskController extends Component
 
         $task->save();        
 
-        return redirect()->to('/');
+        $this->showEditModal = false;
     }
 }
 
