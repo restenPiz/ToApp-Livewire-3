@@ -72,6 +72,8 @@
                     </div>
                 </div>
 
+                {{--Fim do modal de editar--}}
+
               @endforeach
             </tbody>
         </table>
