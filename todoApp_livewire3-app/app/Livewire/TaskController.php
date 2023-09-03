@@ -56,7 +56,7 @@ class TaskController extends Component
         $this->editedTask = $task->Task;
     }
     
-    //?Inicio do modal para eliminar
+    //?Inicio da funcao para eliminar
     public function openDeleteModal($id)
     {
         $task = Task::find($id);
@@ -64,6 +64,7 @@ class TaskController extends Component
         $task->delete();
     }
 
+    //?Inicio da funcao para editar os dados
     public function update()
     {
         $task=Task::find($this->id);

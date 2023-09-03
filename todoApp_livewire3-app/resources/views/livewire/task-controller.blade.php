@@ -63,6 +63,7 @@
                                         <!-- Adicione seus campos de edição aqui -->
                                         <input wire:model="editedTask" type="text" class="form-control">
                                     </div>
+                                    
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
                                         <button wire:click="update" class="btn btn-primary">Salvar Alterações</button>
