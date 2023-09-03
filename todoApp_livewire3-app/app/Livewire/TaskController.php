@@ -69,10 +69,11 @@ class TaskController extends Component
         $task->save();
 
         //*Fechar o modal
-        $this->showEditModal = true;
+        $this->showEditModal = false;
 
         $this->editedTask='';
 
+        return Redirect::to(route('Task.index'));
     }
 }
 
