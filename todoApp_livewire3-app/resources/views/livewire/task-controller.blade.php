@@ -83,3 +83,11 @@
     </div>
 
 </div>
+
+<script>
+    document.addEventListener('livewire:initialized', () => {
+       @this.on('modalClosed', (event) => {
+           
+       });
+    });
+</script>
