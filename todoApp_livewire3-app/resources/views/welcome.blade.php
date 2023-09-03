@@ -24,9 +24,5 @@
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    @livewireScripts
-
-    {{-- Fim do link do javascript --}}
-    @stack('scripts')
 </body>
 </html>
