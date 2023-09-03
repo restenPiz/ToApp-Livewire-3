@@ -51,7 +51,7 @@
                 {{--Inicio do modal de editar--}}
 
                 @if($showEditModal)
-                    <div wire:ignore.self class="modal fade" id="showEditModal" tabindex="-1" aria-labelledby="showEditModal" aria-hidden="true">
+                    <div class="modal fade" id="showEditModal" tabindex="-1" aria-labelledby="showEditModal" aria-hidden="true">
                         <div class="modal-dialog">
                             <form wire::submit="update">
                                 <div class="modal-content">
@@ -79,19 +79,4 @@
         </table>
     
     </div>
-
-    {{--Inicio do codigo responsavel por fechar o modal--}}
-    <script>
-        document.addEventListener('livewire:load', function () {
-            window.livewire.on('toggleProductModal', () => {
-                $('#showEditModal').modal('toggle');
-            });
-
-            // Ouvir o evento personalizado e fechar o modal
-            window.livewire.on('modalClosed', () => {
-                $('#showEditModal').modal('hide');
-            });
-        });
-    </script>
-
 </div>
