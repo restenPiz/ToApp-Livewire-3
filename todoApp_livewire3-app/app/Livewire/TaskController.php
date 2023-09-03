@@ -43,7 +43,7 @@ class TaskController extends Component
     {
         $this->id=$id;
 
-        $this->showEditModal=true;
+        $this->showEditModal=false;
 
         $task=Task::find($id);
 
@@ -65,11 +65,9 @@ class TaskController extends Component
 
         $task->Task=$this->editedTask;
 
-        $task->save();
+        $task->save();        
 
-        //*Fechar o modal
-        $this->showEditModal = false;
-        
+        $this->dispatchBrowserEvent('modalClosed');
     }
 }
 

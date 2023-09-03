@@ -49,7 +49,9 @@
                 </tr>
 
                 {{--Inicio do modal de editar--}}
-                
+
+                @if ($showEditModal==false)
+                    
                 <div wire:ignore.self class="modal fade" id="showEditModal" tabindex="-1" aria-labelledby="showEditModal" aria-hidden="true">
                     <div class="modal-dialog">
                         <form wire:submit="update">
@@ -72,6 +74,8 @@
                     </div>
                 </div>
 
+                @endif
+
                 {{--Fim do modal de editar--}}
 
               @endforeach
@@ -81,3 +85,10 @@
     </div>
 
 </div>
+
+<script>
+    window.addEventListener('modalClosed', () => {
+        // Coloque aqui o código para fechar o modal, por exemplo:
+        $('#showEditModal').modal('hide');
+    });
+</script>
