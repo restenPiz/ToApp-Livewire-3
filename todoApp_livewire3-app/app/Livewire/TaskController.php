@@ -67,7 +67,7 @@ class TaskController extends Component
 
         $task->save();        
 
-        $this->dispatchBrowserEvent('modalClosed');
+        return redirect()->to('/');
     }
 }
 
