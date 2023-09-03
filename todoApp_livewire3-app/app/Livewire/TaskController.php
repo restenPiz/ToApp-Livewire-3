@@ -6,6 +6,7 @@ use App\Models\Task;
 use Livewire\Component;
 use Livewire\WithPagination;
 use Request;
+use Illuminate\Support\Facades\Redirect;
 
 class TaskController extends Component
 {
@@ -64,13 +65,14 @@ class TaskController extends Component
         $task=Task::find($this->id);
 
         $task->Task=$this->editedTask;
+
         $task->save();
 
         //*Fechar o modal
-        $this->showEditModal = false;
+        $this->showEditModal = true;
 
-        //? Limpe o valor em $editedTask
-        $this->editedTask = '';
+        $this->editedTask='';
+
     }
 }
 
