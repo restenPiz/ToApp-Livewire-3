@@ -42,7 +42,7 @@
                     <td>{{$task->Task}}</td>
                     <td>
                         <div class="d-grid gap-2 d-md-block">
-                            <button data-bs-toggle="modal" data-bs-target="#showEditModal" wire:click="openEditModal({{ $task->id }})" class="btn btn-primary" type="button">Editar</button>
+                            <button data-bs-toggle="modal" data-bs-target="#showEditModal{{$task->id}}" wire:click="openEditModal({{ $task->id }})" class="btn btn-primary" type="button">Editar</button>
                             <button wire:click="openDeleteModal({{ $task->id }})" class="btn btn-danger" type="submit">Eliminar</button>
                         </div>
                     </td>
@@ -50,23 +50,23 @@
 
                 {{--Inicio do modal de editar--}}
                     
-                <div wire:ignore.self class="modal fade" id="showEditModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+                <div wire:ignore.self class="modal fade" id="showEditModal{{$task->id}}" tabindex="-1" aria-labelledby="editModalLabel{{$task->id}}" aria-hidden="true">
                     <div class="modal-dialog">
-                        <form wire:submit.prevent="update">
-                            <div class="modal-content">
+                        <div class="modal-content">
+                            <form wire:submit.prevent="update">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="editModalLabel">Editar Tarefa</h5>
+                                    <h5 class="modal-title" id="editModalLabel{{$task->id}}">Editar Tarefa</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <input wire:model="editedTask" type="text" class="form-control" value="{{$task->editedTask}}">
+                                    <input wire:model="editedTask" type="text" class="form-control">
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
                                     <button type="submit" class="btn btn-primary">Salvar Alterações</button>
                                 </div>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                     </div>
                 </div>
 

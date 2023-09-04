@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use App\Models\Task;
 use Livewire\Component;
+use App\Livewire;
 
 class TaskController extends Component
 {
@@ -64,7 +65,7 @@ class TaskController extends Component
 
         $task->save();        
 
-        $this->showEditModal = false;
+        $this->dispatchBrowserEvent('dadosAtualizados', ['fecharModal' => true]);
 
     }
 }
