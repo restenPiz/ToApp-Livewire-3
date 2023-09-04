@@ -1,6 +1,6 @@
 <div>
     
-    {{--Inicio do navbar--}}
+    {{--Incluindo o navbar na aplicacao--}}
     @include('livewire.layouts.navbar')
 
     {{--Inicio do formulario de submissao--}}
