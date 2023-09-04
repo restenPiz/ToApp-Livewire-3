@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use App\Models\Task;
 use Livewire\Component;
+use Livewire\WithPagination;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class TaskController extends Component
@@ -12,10 +13,12 @@ class TaskController extends Component
     public $Task, $editedTask, $id;
     public $showEditModal=false;
 
+    use WithPagination;
+
     //?Inicio do metodo principal responsavel pela pagina principal
     public function render()
     {
-        $tasks=Task::all();
+        $tasks=Task::paginate(4);
 
         return view('livewire.task-controller',compact('tasks'));
     }
