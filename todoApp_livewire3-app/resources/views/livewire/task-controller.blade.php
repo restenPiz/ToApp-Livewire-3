@@ -80,6 +80,8 @@
             </tbody>
             
         </table>
+
+        {{--Inicio dos links de paginacao--}}
         <div>
             @if ($tasks->hasPages())
                 <nav role="navigation" aria-label="Pagination Navigation">
