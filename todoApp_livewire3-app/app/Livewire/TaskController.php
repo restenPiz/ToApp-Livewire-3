@@ -5,7 +5,7 @@ namespace App\Livewire;
 use App\Models\Task;
 use Livewire\Component;
 use App\Livewire;
-use Alert;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class TaskController extends Component
 {
