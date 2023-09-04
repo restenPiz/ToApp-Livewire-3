@@ -20,13 +20,14 @@
     @livewire('task-controller')
     {{-- Fim do corpo do meu website --}}
 
+    @include('sweetalert::alert')
+
     {{-- Início do link de javascript --}}
     
     {{--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>--}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>    
 
     @livewireScripts
-    @include('sweetalert::alert')
 
 </body>
 </html>
