@@ -50,6 +50,7 @@
 
                 {{--Inicio do modal de editar--}}
                     
+                @if ($showEditModal)
                 <div wire:ignore.self class="modal fade" id="showEditModal{{$task->id}}" tabindex="-1" aria-labelledby="editModalLabel{{$task->id}}" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
@@ -69,6 +70,7 @@
                         </div>
                     </div>
                 </div>
+                @endif
 
                 {{--Fim do modal de editar--}}
 

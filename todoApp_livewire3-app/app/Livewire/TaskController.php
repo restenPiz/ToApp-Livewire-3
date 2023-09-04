@@ -63,9 +63,9 @@ class TaskController extends Component
 
         $task->Task=$this->editedTask;
 
-        $task->save();        
-
-        $this->dispatchBrowserEvent('dadosAtualizados', ['fecharModal' => true]);
+        $task->save();   
+        
+        $this->showEditModal=false;
 
     }
 }
