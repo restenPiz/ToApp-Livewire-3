@@ -18,7 +18,7 @@ class TaskController extends Component
     //?Inicio do metodo principal responsavel pela pagina principal
     public function render()
     {
-        $tasks=Task::paginate(4);
+        $tasks=Task::paginate(3);
 
         return view('livewire.task-controller',compact('tasks'));
     }
