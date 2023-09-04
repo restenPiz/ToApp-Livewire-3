@@ -61,6 +61,10 @@ class TaskController extends Component
     //?Inicio da funcao para editar os dados
     public function update()
     {
+        $this->validate([
+            'Task'=>'required|min:3',
+        ]);
+
         $task=Task::find($this->id);
 
         $task->Task=$this->editedTask;

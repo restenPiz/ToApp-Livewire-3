@@ -62,6 +62,7 @@
                                 </div>
                                 <div class="modal-body">
                                     <input wire:model="editedTask" type="text" class="form-control">
+                                    <div style="color:red">@error('editedTask') {{ $message }} @enderror</div>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
