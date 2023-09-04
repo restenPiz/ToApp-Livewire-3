@@ -5,6 +5,7 @@ namespace App\Livewire;
 use App\Models\Task;
 use Livewire\Component;
 use App\Livewire;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class TaskController extends Component
 {
@@ -30,6 +31,8 @@ class TaskController extends Component
         $table=new Task();
 
         $table->Task=$this->Task;
+
+        Alert::success('Adicionado','A tarefa foi adicionado com sucesso!');
 
         $table->save();
 
