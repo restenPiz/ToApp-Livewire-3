@@ -65,6 +65,7 @@ class TaskController extends Component
 
         $task->save();   
         
+        //*Metodo para fechar o modal
         $this->showEditModal=false;
 
     }
