@@ -11,6 +11,7 @@
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Tarefa</label>
                         <input wire:model="Task" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Digite a sua tarefa">
+                        <div>@error('Task') {{ $message }} @enderror</div>
                     </div>
         
                     {{--Inicio do butao submit--}}

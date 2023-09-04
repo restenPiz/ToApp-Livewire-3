@@ -24,7 +24,7 @@ class TaskController extends Component
     public function save()
     {
         $this->validate([
-            'Task'=>'required',
+            'Task'=>'required|min:3',
         ]);
 
         $table=new Task();
