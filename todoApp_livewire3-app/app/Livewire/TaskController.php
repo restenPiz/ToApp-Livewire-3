@@ -18,6 +18,7 @@ class TaskController extends Component
     //?Inicio do metodo principal responsavel pela pagina principal
     public function render()
     {
+        //*Retorna todos os dados com a paginacao
         $tasks=Task::paginate(3);
 
         return view('livewire.task-controller',compact('tasks'));
@@ -67,7 +68,7 @@ class TaskController extends Component
     public function update()
     {
         //*Inicio do metodo de validacao
-        
+
         $this->validate([
             'Task'=>'required|min:3',
         ]);
