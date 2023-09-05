@@ -26,6 +26,8 @@ class TaskController extends Component
     //?Inicio do metodo para salvar os dados
     public function save()
     {
+        //*Inicio do metodo responsavel pela validacao
+        
         $this->validate([
             'Task'=>'required|min:3',
         ]);
